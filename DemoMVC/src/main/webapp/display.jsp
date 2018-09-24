@@ -7,6 +7,11 @@
 <title>Result</title>
 </head>
 <body>
-Result is: ${result}
+<%
+if(session.getAttribute("name")==null)
+	response.sendRedirect("index.jsp");
+%>
+<div>Here are our videos...</div>
+<a href="https://www.youtube.com/watch?v=4AhqahtZKYs&start_radio=1&list=RD4AhqahtZKYs">Vid1</a>
 </body>
 </html>

@@ -7,7 +7,7 @@ ${status }
 <form action="login">
 <h1>Enter the cridentials...</h1><br>
 Enter username:  <input type="text" name="uname"><br>
-Enter password:  <input type="text" name="pass"><br>
+Enter password:  <input type="password" name="pass"><br>
 <input type="submit" value="Login">
 </form>
 <form action="register">

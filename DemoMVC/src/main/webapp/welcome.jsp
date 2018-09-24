@@ -7,7 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-${status }
 <%
 if(session.getAttribute("name")==null)
 {
@@ -15,9 +14,10 @@ if(session.getAttribute("name")==null)
 	response.sendRedirect("index.jsp");
 }
 
-%> 
-<h3>Welcome</h3> ${name }<h3>...You have successfully registered to our site...</h3><br>  
+%>   
 </body>
+<h3>Welcome ${name }  ${status }</h3><br>
+<div><a href="display.jsp">Link to videos...</a></div>
 <form action="logout">
 <input type="submit" value="Logout">
 </form>

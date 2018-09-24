@@ -35,7 +35,7 @@ public class RegisterController {
 		{
 			ModelAndView mv=new ModelAndView();
 			mv.setViewName("registerform.jsp");
-			mv.addObject("rs","Username already exists...<br>");
+			mv.addObject("status","Username already exists...<br>");
 			st.close();
 			con.close();
 			return mv;
@@ -47,8 +47,10 @@ public class RegisterController {
 			int res=st1.executeUpdate(registerQuery);
 			HttpSession session=request.getSession();
 			session.setAttribute("name",uname);
-			response.sendRedirect("welcome.jsp");
-			return null;
+			ModelAndView mv=new ModelAndView();
+			mv.setViewName("welcome.jsp");
+			mv.addObject("status",", you've successfully registered...<br>");
+			return mv;
 		}
 	}
 	@RequestMapping("/logout")
@@ -80,7 +82,7 @@ public class RegisterController {
 		{
 			ModelAndView mv=new ModelAndView();
 			mv.setViewName("welcome.jsp");
-			mv.addObject("status","Congrats, You're in...<br>");
+			mv.addObject("status",", You're in...<br>");
 			HttpSession session=request.getSession();
 			session.setAttribute("name", uname);
 			return mv;
