@@ -62,7 +62,7 @@ public class RegisterController {
 		response.sendRedirect("index.jsp");
 	}
 	@RequestMapping("/login")
-	public ModelAndView login(HttpServletRequest request,HttpServletResponse response) throws ClassNotFoundException, SQLException
+	public ModelAndView login(HttpServletRequest request,HttpServletResponse response) throws ClassNotFoundException, SQLException, IOException
 	{
 		String uname=request.getParameter("uname");
 		String pass=request.getParameter("pass");
@@ -85,6 +85,7 @@ public class RegisterController {
 			mv.addObject("status",", You're in...<br>");
 			HttpSession session=request.getSession();
 			session.setAttribute("name", uname);
+			response.sendRedirect("items");
 			return mv;
 		}
 	}

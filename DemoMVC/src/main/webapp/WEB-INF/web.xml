@@ -22,6 +22,18 @@
   	<description></description>
   	<servlet-class>com.telusko.SecondServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>items</servlet-name>
+  	<display-name>items</display-name>
+  	<description></description>
+  	<servlet-class>models.items</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>orders</servlet-name>
+  	<display-name>orders</display-name>
+  	<description></description>
+  	<servlet-class>models.orders</servlet-class>
+  </servlet>
 	<servlet-mapping>
 		<servlet-name>telusko</servlet-name>
 		<url-pattern>/</url-pattern>
@@ -33,5 +45,9 @@
 	<servlet-mapping>
 		<servlet-name>SecondServlet</servlet-name>
 		<url-pattern>/SecondServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>items</servlet-name>
+		<url-pattern>/items</url-pattern>
 	</servlet-mapping>
 </web-app>

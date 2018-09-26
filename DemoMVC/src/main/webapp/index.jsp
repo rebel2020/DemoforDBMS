@@ -2,6 +2,7 @@
     pageEncoding="UTF-8" isELIgnored="false"%>
 <html>
 <body>
+<% out.println(request.getParameter("param"));%>
 <h2>Hello World!</h2><br>
 ${status }
 <form action="login">
